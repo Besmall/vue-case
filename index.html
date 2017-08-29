@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>构造器</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        // 创建构造器
+        var aa = Vue.extend({
+            template: '<p>{{firstName}} {{lastName}} 学习 {{alias}}</p>',
+            data: function () {
+                return {
+                firstName: '我正在',
+                lastName: '努力',
+                alias: 'Vue'
+                }
+            }
+        })
+        // 创建 aa 实例，并挂载到一个元素上。$mount()方法手动挂在
+        new aa().$mount('#app')
+    </script>
+</body>
+</html>
